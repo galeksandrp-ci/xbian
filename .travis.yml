@@ -1,0 +1,4 @@
+language: cpp
+script:
+- sudo bash -c 'cd xbian; ./run.me prepare'
+- sudo bash -c 'cd xbian-build-img; $xbiangit --arch rpi'
