@@ -1,4 +1,4 @@
 language: cpp
 script:
 - sudo bash -c './run.me prepare'
-- sudo -i bash -c "cd $TRAVIS_BUILD_DIR/xbian-build-img; $xbiangit --arch rpi"
+- sudo -i bash -c "cd $TRAVIS_BUILD_DIR/xbian-build-img; \$xbiangit --arch rpi"
