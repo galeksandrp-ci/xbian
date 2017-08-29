@@ -1,4 +1,6 @@
 language: cpp
 script:
 - sudo bash -c './run.me prepare'
+- mkdir -p xbian-build-img/build/rpi-nightly/working
 - sudo -i bash -c "cd $TRAVIS_BUILD_DIR/xbian-build-img; \$xbiangit --arch rpi"
+- find -name '*img*' || true
