@@ -4,3 +4,11 @@ script:
 - mkdir -p xbian-build-img/build/rpi-nightly/working
 - sudo -i bash -c "cd $TRAVIS_BUILD_DIR/xbian-build-img; \$xbiangit --arch rpi"
 - find -name '*img*' || true
+deploy:
+  provider: releases
+  api_key: $GITHUB_TOKEN
+  skip_cleanup: true
+  file: "xbian-build-img/build/rpi/XBian_*_rpi.img.gz"
+  file_glob: true
+  on:
+    all_branches: true
